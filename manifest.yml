@@ -5,8 +5,9 @@ applications:
     random-route: true
     instances: 1
     memory: 1G
+    buildpacks: [java_buildpack_offline]
     services:
       - cook-config-server
     env:
-      SPRING_PROFILES_ACTIVE: development
+      SPRING_PROFILES_ACTIVE: production
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ }}'
